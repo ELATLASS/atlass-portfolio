@@ -1,0 +1,49 @@
+{
+  "portfolio_version": "1.0.0",
+  "last_updated": "2026-07-31T03:55:00Z",
+  "owner": {
+    "name": "Abdessamad El Atlassi",
+    "role": "Data Analyst & BI Engineer",
+    "location": "Cergy, France",
+    "email": "elatlas@gmail.com"
+  },
+  "ecommerce": {
+    "brand": "Maroc of Design",
+    "platforms": ["Amazon Merch", "Redbubble", "Amazon KDP"],
+    "roi": 112,
+    "products": ["t-shirts", "stickers", "hoodies", "books"],
+    "themes": ["marocain", "architecture", "calligraphie"]
+  },
+  "github": {
+    "username": "ELATLASS",
+    "repos": [
+      {"name": "atlass-portfolio", "description": "Automated portfolio"},
+      {"name": "atlass-ecommerce", "description": "E-commerce automation"},
+      {"name": "atlass-data-analytics", "description": "Data analytics pipelines"},
+      {"name": "atlass-creative", "description": "Creative projects"}
+    ]
+  },
+  "infrastructure": {
+    "vps": "164.132.197.112",
+    "agent": "Hermes Agent",
+    "model": "Ollama 0.32.3",
+    "teams": 22,
+    "agents": 65
+  },
+  "case_studies": [
+    {
+      "id": "cs-001",
+      "title": "Maroc of Design ROI Analysis",
+      "date": "2026-07-31",
+      "summary": "APEMAN+C420 strategy achieved 112% ROI across Amazon Merch and Redbubble platforms.",
+      "metrics": {"roi": 112, "platforms": 3, "products_sold": "TBD"}
+    }
+  ],
+  "metrics": {
+    "freelance_years": 4,
+    "ecommerce_platforms": 3,
+    "github_repos": 4,
+    "ai_teams": 22,
+    "ai_agents": 65
+  }
+}

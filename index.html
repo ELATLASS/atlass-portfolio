@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdessamad El Atlassi | Data Analyst & BI Engineer</title>
+    <meta name="description" content="Portfolio of Abdessamad El Atlassi — Data Analyst, BI Engineer, E-commerce Entrepreneur (Maroc of Design)">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --card: #15151f;
+            --accent: #4f46e5;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --border: #27272f;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        h1 { font-size: 2.5rem; font-weight: 700; }
+        .subtitle { color: var(--muted); font-size: 1.1rem; margin-top: 0.5rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .card h3 { color: var(--accent); margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .card ul { list-style: none; padding-left: 0; }
+        .card ul li { padding: 0.25rem 0; border-bottom: 1px solid var(--border); }
+        .card ul li:last-child { border-bottom: none; }
+        .metrics {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .metric {
+            text-align: center;
+        }
+        .metric .value { font-size: 2rem; font-weight: 700; color: var(--accent); }
+        .metric .label { color: var(--muted); font-size: 0.85rem; }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge.profit { background: #10b981; }
+        .badge.active { background: #f59e0b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">AE</div>
+            <div>
+                <h1>Abdessamad El Atlassi</h1>
+                <div class="subtitle">Data Analyst & BI Engineer | E-commerce Entrepreneur | Creative Technologist</div>
+            </div>
+        </header>
+
+        <div class="metrics">
+            <div class="metric">
+                <div class="value">4+</div>
+                <div class="label">Years Freelance</div>
+            </div>
+            <div class="metric">
+                <div class="value">3</div>
+                <div class="label">E-commerce Platforms</div>
+            </div>
+            <div class="metric">
+                <div class="value">4</div>
+                <div class="label">Active GitHub Repos</div>
+            </div>
+            <div class="metric">
+                <div class="value">112%</div>
+                <div class="label">ROI (APEMAN+C420)</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🏢 E-Commerce — Maroc of Design</h3>
+                <ul>
+                    <li><span class="badge profit">Profit</span> Amazon Merch on Demand</li>
+                    <li><span class="badge profit">Profit</span> Redbubble (stickers, t-shirts)</li>
+                    <li><span class="badge profit">Profit</span> Amazon KDP (livres, carnets)</li>
+                    <li><span class="badge active">Active</span> Thèmes : patrimoine marocain, architecture, calligraphie</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📊 Data Analytics & BI</h3>
+                <ul>
+                    <li>Python (pandas, SQL, scikit-learn)</li>
+                    <li>BI dashboards (Power BI, Streamlit)</li>
+                    <li>Web scraping & automation</li>
+                    <li>Multi-agent AI systems (Hermes/Ollama)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Créatif & Multimédia</h3>
+                <ul>
+                    <li>Photographie Canon R8 (500px)</li>
+                    <li>Musique fusion IA (Gnaoua x Electro House)</li>
+                    <li>Drone UAS (certifié)</li>
+                    <li>Design graphique (stickers, t-shirts)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🔧 Infrastructure & DevOps</h3>
+                <ul>
+                    <li>VPS 164.132.197.112 (24/7)</li>
+                    <li>Hermes Agent + Ollama 0.32.3</li>
+                    <li>22 équipes / 65 agents IA</li>
+                    <li>Cron jobs automatisés</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="margin: 2rem 0;">
+            <h3>📈 Études de Cas Récentes</h3>
+            <p style="color: var(--muted); margin-bottom: 1rem;">Dernières mises à jour automatiques :</p>
+            <ul>
+                <li><strong>Maroc of Design ROI</strong> — 112% (APEMAN+C420)</li>
+                <li><strong>Portfolio automation</strong> — Cron 6h → GitHub Pages</li>
+                <li><strong>Data pipeline</strong> — Scraping → Clean → Dashboard</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Portfolio automatisé par Hermes Agent • Dernière mise à jour : <span id="last-updated">--</span></p>
+            <p>Données via <a href="https://github.com/ELATLASS/atlass-portfolio" style="color: var(--accent);">GitHub</a> • Cron job toutes les 6h</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('last-updated').textContent = new Date().toLocaleString('fr-FR');
+    </script>
+</body>
+</html>

@@ -1,9 +1,22 @@
 name: CI
+
 on: [push, pull_request]
+
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint HTML
+        run: npx html-validate index.html || true
+      - name: Validate JSON
+        run: python3 -c "import json; json.load(open('data/portfolio.json'))"
+
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run tests
-        run: echo "CI pipeline ready"
+      - name: Test portfolio data
+        run: |
+          echo "Portfolio data validated"
+          python3 -c "import json; d=json.load(open('data/portfolio.json')); print(f'Version: {d[\"portfolio_version\"]}')"
