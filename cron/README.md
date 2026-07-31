@@ -1,36 +1,33 @@
-# Atlass Portfolio — CI/CD Pipeline
+# Atlass Portfolio — Trend Research Pipeline
 
-This workflow automatically deploys the portfolio to GitHub Pages on every push to `main`.
+> Automated case study generation from trending data/AI topics
 
-## Triggers
-- Push to `main` branch
-- Manual dispatch
+## Pipeline
 
-## Jobs
+1. **`cron/fetch_trends.py`** — Fetches trending repos from GitHub API
+2. **`case-studies/`** — Auto-generated markdown case studies
+3. **`data/`** — Raw JSON data from API calls
+4. **`index.html`** — Portfolio homepage (auto-deployed to GitHub Pages)
 
-### 1. Deploy to GitHub Pages
-- Checks out the repository
-- Sets up Node.js (for any build steps)
-- Deploys to GitHub Pages via `peaceiris/actions-gh-pages`
+## Cron Schedule
 
-### 2. Portfolio Monitor (Cron)
-- Runs every 6 hours
-- Checks for new data in `data/portfolio.json`
-- Updates case studies and metrics
-- Commits and pushes if changes detected
+The portfolio monitor runs every 6 hours via Hermes Agent cron job:
+- Fetches fresh trending data
+- Generates new case studies
+- Updates portfolio metrics
+- Commits and pushes to GitHub
 
-## Configuration
+## Source Grading
 
-Set the following secrets in your GitHub repository:
-- `GH_TOKEN` — GitHub Personal Access Token (for commits)
+| Grade | Meaning | Sources |
+|-------|---------|---------|
+| ✅ Confirmed | Direct API data | GitHub API, official docs |
+| 🔍 Indice | Inferred from metadata | Repo descriptions, topics |
+| 🔄 À vérifier | Projected/trend analysis | Growth projections |
 
-## Usage
+## Topics Covered
 
-```bash
-# Push to deploy
-git add .
-git commit -m "Update portfolio"
-git push origin main
-```
-
-The portfolio will be live at: https://elatlass.github.io/atlass-portfolio/
+- LLM-powered data analysis agents
+- AI data analytics tools
+- Multi-agent systems
+- Generative AI for data science

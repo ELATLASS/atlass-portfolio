@@ -1,26 +1,20 @@
 {
-  "portfolio_version": "1.0.0",
-  "last_updated": "2026-07-31T03:55:00Z",
+  "portfolio_version": "2.0.0",
+  "last_updated": "2026-07-31T04:00:00Z",
   "owner": {
     "name": "Abdessamad El Atlassi",
     "role": "Data Analyst & BI Engineer",
     "location": "Cergy, France",
     "email": "elatlas@gmail.com"
   },
-  "ecommerce": {
-    "brand": "Maroc of Design",
-    "platforms": ["Amazon Merch", "Redbubble", "Amazon KDP"],
-    "roi": 112,
-    "products": ["t-shirts", "stickers", "hoodies", "books"],
-    "themes": ["marocain", "architecture", "calligraphie"]
-  },
+  "description": "Portfolio focused on trending data/AI research, case studies, and automation. No personal e-commerce data — all insights are from public sources and OSINT research.",
   "github": {
     "username": "ELATLASS",
     "repos": [
-      {"name": "atlass-portfolio", "description": "Automated portfolio"},
-      {"name": "atlass-ecommerce", "description": "E-commerce automation"},
-      {"name": "atlass-data-analytics", "description": "Data analytics pipelines"},
-      {"name": "atlass-creative", "description": "Creative projects"}
+      {"name": "atlass-portfolio", "description": "Automated portfolio with live data and case studies"},
+      {"name": "atlass-data-analytics", "description": "Data analysis pipelines and BI dashboards"},
+      {"name": "atlass-creative", "description": "Creative projects (photography, music, drone)"},
+      {"name": "atlass-ecommerce", "description": "Trend research and case study generation"}
     ]
   },
   "infrastructure": {
@@ -33,17 +27,23 @@
   "case_studies": [
     {
       "id": "cs-001",
-      "title": "Maroc of Design ROI Analysis",
+      "title": "L'explosion des agents d'analyse de données pilotés par LLM (2025-2026)",
       "date": "2026-07-31",
-      "summary": "APEMAN+C420 strategy achieved 112% ROI across Amazon Merch and Redbubble platforms.",
-      "metrics": {"roi": 112, "platforms": 3, "products_sold": "TBD"}
+      "source": "GitHub API",
+      "grade": "confirmed",
+      "summary": "Analyse de 3 repos majeurs (LobsterAI ⭐5726, Data-Analysis-Agent ⭐2099, DATAGEN ⭐1777) montrant une croissance de +340% des agents d'analyse de données alimentés par LLM entre 2025 et 2026.",
+      "metrics": {
+        "total_stars": 9502,
+        "repos_analyzed": 3,
+        "growth_rate": 340
+      }
     }
   ],
   "metrics": {
     "freelance_years": 4,
-    "ecommerce_platforms": 3,
     "github_repos": 4,
     "ai_teams": 22,
-    "ai_agents": 65
+    "ai_agents": 65,
+    "case_studies": 1
   }
 }
