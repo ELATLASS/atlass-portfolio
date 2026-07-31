@@ -13,6 +13,18 @@
             --text: #e5e7eb;
             --muted: #9ca3af;
             --border: #27272f;
+            --green: #10b981;
+            --yellow: #f59e0b;
+        }
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --card: #f8fafc;
+            --accent: #4f46e5;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --green: #059669;
+            --yellow: #d97706;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -20,11 +32,13 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 2rem;
             padding: 3rem 0;
             border-bottom: 1px solid var(--border);
@@ -39,12 +53,22 @@
             justify-content: center;
             font-size: 2.5rem;
             font-weight: 700;
+            color: white;
         }
         h1 { font-size: 2.5rem; font-weight: 700; }
         .subtitle { color: var(--muted); font-size: 1.1rem; margin-top: 0.5rem; }
+        .theme-toggle {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
@@ -68,16 +92,11 @@
         }
         .metric {
             text-align: center;
+            flex: 1;
+            min-width: 120px;
         }
         .metric .value { font-size: 2rem; font-weight: 700; color: var(--accent); }
         .metric .label { color: var(--muted); font-size: 0.85rem; }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
         .badge {
             display: inline-block;
             background: var(--accent);
@@ -87,18 +106,36 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
-        .badge.profit { background: #10b981; }
-        .badge.active { background: #f59e0b; }
+        .badge.profit { background: var(--green); }
+        .badge.active { background: var(--yellow); }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        a { color: var(--accent); }
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 1.8rem; }
+            .metrics { gap: 1rem; }
+            .metric .value { font-size: 1.5rem; }
+            header { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="avatar">AE</div>
-            <div>
-                <h1>Abdessamad El Atlassi</h1>
-                <div class="subtitle">Data Analyst & BI Engineer | E-commerce Entrepreneur | Creative Technologist</div>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="avatar">AE</div>
+                <div>
+                    <h1>Abdessamad El Atlassi</h1>
+                    <div class="subtitle">Data Analyst & BI Engineer | E-commerce Entrepreneur | Creative Technologist</div>
+                </div>
             </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Dark/Light</button>
         </header>
 
         <div class="metrics">
@@ -166,19 +203,31 @@
             <h3>📈 Études de Cas Récentes</h3>
             <p style="color: var(--muted); margin-bottom: 1rem;">Dernières mises à jour automatiques :</p>
             <ul>
-                <li><strong>Maroc of Design ROI</strong> — 112% (APEMAN+C420)</li>
-                <li><strong>Portfolio automation</strong> — Cron 6h → GitHub Pages</li>
-                <li><strong>Data pipeline</strong> — Scraping → Clean → Dashboard</li>
+                <li><strong>IA générative e-commerce</strong> — 5 repos analysés (1,985 étoiles)</li>
+                <li><strong>Agents data LLM</strong> — LobsterAI ⭐5,727, DATAGEN ⭐1,777</li>
+                <li><strong>IA créative</strong> — Open-Generative-AI ⭐25,245, FIBO ⭐329</li>
             </ul>
         </div>
 
         <footer>
             <p>Portfolio automatisé par Hermes Agent • Dernière mise à jour : <span id="last-updated">--</span></p>
-            <p>Données via <a href="https://github.com/ELATLASS/atlass-portfolio" style="color: var(--accent);">GitHub</a> • Cron job toutes les 6h</p>
+            <p>Données via <a href="https://github.com/ELATLASS/atlass-portfolio">GitHub</a> • Cron job toutes les 6h</p>
         </footer>
     </div>
 
     <script>
+        // Theme toggle
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+        }
+        
+        // Auto-detect system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        
+        // Update last updated
         document.getElementById('last-updated').textContent = new Date().toLocaleString('fr-FR');
     </script>
 </body>
