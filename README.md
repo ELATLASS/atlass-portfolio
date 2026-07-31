@@ -19,7 +19,11 @@ cd atlass-portfolio
 
 ## CI/CD
 ![CI](https://github.com/ELATLASS/atlass-portfolio/actions/workflows/ci.yml/badge.svg)
+n## 📊 Latest Case Study
+- [case-studies/llm-data-agents-2025-2026.md](https://github.com/ELATLASS/atlass-portfolio/blob/main/case-studies/llm-data-agents-2025-2026.md)
 ![Deploy](https://github.com/ELATLASS/atlass-portfolio/actions/workflows/deploy.yml/badge.svg)
+n## 📊 Latest Case Study
+- [case-studies/llm-data-agents-2025-2026.md](https://github.com/ELATLASS/atlass-portfolio/blob/main/case-studies/llm-data-agents-2025-2026.md)
 
 ## Live Demo
 [https://elatlass.github.io/atlass-portfolio/](https://elatlass.github.io/atlass-portfolio/)
