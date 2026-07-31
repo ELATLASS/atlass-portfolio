@@ -1,6 +1,6 @@
 {
-  "portfolio_version": "2.0.0",
-  "last_updated": "2026-07-31T04:00:00Z",
+  "portfolio_version": "2.1.0",
+  "last_updated": "2026-07-31T06:15:00Z",
   "owner": {
     "name": "Abdessamad El Atlassi",
     "role": "Data Analyst & BI Engineer",
@@ -11,39 +11,33 @@
   "github": {
     "username": "ELATLASS",
     "repos": [
-      {"name": "atlass-portfolio", "description": "Automated portfolio with live data and case studies"},
-      {"name": "atlass-data-analytics", "description": "Data analysis pipelines and BI dashboards"},
-      {"name": "atlass-creative", "description": "Creative projects (photography, music, drone)"},
-      {"name": "atlass-ecommerce", "description": "Trend research and case study generation"}
+      {"name": "atlass-portfolio", "description": "Portfolio + GitHub Pages", "url": "https://github.com/ELATLASS/atlass-portfolio"},
+      {"name": "atlass-ecommerce", "description": "AI e-commerce trend research", "url": "https://github.com/ELATLASS/atlass-ecommerce"},
+      {"name": "atlass-data-analytics", "description": "LLM data analysis agents", "url": "https://github.com/ELATLASS/atlass-data-analytics"},
+      {"name": "atlass-creative", "description": "AI creative tools", "url": "https://github.com/ELATLASS/atlass-creative"}
     ]
   },
-  "infrastructure": {
-    "vps": "164.132.197.112",
-    "agent": "Hermes Agent",
-    "model": "Ollama 0.32.3",
-    "teams": 22,
-    "agents": 65
-  },
   "case_studies": [
-    {
-      "id": "cs-001",
-      "title": "L'explosion des agents d'analyse de données pilotés par LLM (2025-2026)",
-      "date": "2026-07-31",
-      "source": "GitHub API",
-      "grade": "confirmed",
-      "summary": "Analyse de 3 repos majeurs (LobsterAI ⭐5726, Data-Analysis-Agent ⭐2099, DATAGEN ⭐1777) montrant une croissance de +340% des agents d'analyse de données alimentés par LLM entre 2025 et 2026.",
-      "metrics": {
-        "total_stars": 9502,
-        "repos_analyzed": 3,
-        "growth_rate": 340
-      }
-    }
+    {"repo": "ELATLASS/atlass-ecommerce", "topic": "ecommerce", "file": "case-studies/ecommerce/ai-ecommerce-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-ecommerce/blob/main/case-studies/ecommerce/ai-ecommerce-2025-2026.md"},
+    {"repo": "ELATLASS/atlass-ecommerce", "topic": "ecommerce", "file": "case-studies/ecommerce/ai-product-visualization-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-ecommerce/blob/main/case-studies/ecommerce/ai-product-visualization-2025-2026.md"},
+    {"repo": "ELATLASS/atlass-ecommerce", "topic": "ecommerce", "file": "case-studies/daily/2026-07-31.md", "url": "https://github.com/ELATLASS/atlass-ecommerce/blob/main/case-studies/daily/2026-07-31.md"},
+    {"repo": "ELATLASS/atlass-data-analytics", "topic": "data-analytics", "file": "case-studies/data-analytics/llm-data-agents-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-data-analytics/blob/main/case-studies/data-analytics/llm-data-agents-2025-2026.md"},
+    {"repo": "ELATLASS/atlass-data-analytics", "topic": "data-analytics", "file": "case-studies/data-analytics/llm-bi-tools-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-data-analytics/blob/main/case-studies/data-analytics/llm-bi-tools-2025-2026.md"},
+    {"repo": "ELATLASS/atlass-creative", "topic": "creative", "file": "case-studies/creative/ai-creative-tools-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-creative/blob/main/case-studies/creative/ai-creative-tools-2025-2026.md"},
+    {"repo": "ELATLASS/atlass-creative", "topic": "creative", "file": "case-studies/creative/ai-image-generation-2025-2026.md", "url": "https://github.com/ELATLASS/atlass-creative/blob/main/case-studies/creative/ai-image-generation-2025-2026.md"}
+  ],
+  "cron_jobs": [
+    {"name": "portfolio-monitor", "schedule": "every 6h", "status": "active"},
+    {"name": "daily-case-study", "schedule": "daily 9h UTC", "status": "active"},
+    {"name": "auto-pr-creator", "schedule": "daily 10h UTC", "status": "active"},
+    {"name": "trend-research-pipeline", "schedule": "every 6h", "status": "active"}
   ],
   "metrics": {
-    "freelance_years": 4,
-    "github_repos": 4,
-    "ai_teams": 22,
-    "ai_agents": 65,
-    "case_studies": 1
+    "repos": 4,
+    "case_studies": 7,
+    "open_issues": 13,
+    "closed_issues": 10,
+    "cron_jobs": 4,
+    "workflows": 4
   }
 }
